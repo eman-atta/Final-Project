@@ -57,7 +57,9 @@ export default function MediaCard({ house }) {
             onChange={handleFavoriteToggle}
             icon={<FavoriteBorder />}
             checkedIcon={<Favorite />}
-          />
+          >
+            
+          </Checkbox>
         </CardActions>
       </Card>
     </Grid>

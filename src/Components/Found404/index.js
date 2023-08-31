@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import imges from '../../Imges/404.png'; 
 import Button from '@mui/material/Button';
+import{Link} from 'react-router-dom';
 
 export default function Demo() {
   return (
@@ -31,7 +32,9 @@ export default function Demo() {
           color:'#0B885B',
         }}
       >
-        back to home
+     <Link to='/' className='btn-link'  style={{ widows:'4x00p',color:'#000' }}> back to home </Link>
+
+        
       </Button>
     </Box>
   );

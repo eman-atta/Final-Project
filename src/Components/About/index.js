@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Imges from '../../Imges/house.png';
 
 const gridStyle = {
-  display: 'flex', // Define the style object with the display property
+  display: 'flex',
   justifyContent:"space-around",
   padding:"30px",
   paddingTop:"50px",

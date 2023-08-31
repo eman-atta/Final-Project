@@ -50,10 +50,10 @@ const Filtar = () => {
 
   return (
     <>
-    <div style={{ width: '85%' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px' }}>
+    <div style={{ width: '95%' }}>
+      <div style={{ display: 'flex',flexWrap:'wrap', alignItems: 'center', justifyContent: 'center', gap: '20px', padding:'70px' }}>
 
-        <FormControl sx={{ minWidth: '20%' }}>
+        <FormControl sx={{ minWidth: '20%',color:'#000' }}>
           <TextField
             placeholder='Bedroom'
             value={bedroom}
@@ -73,7 +73,7 @@ const Filtar = () => {
             type='number'
             onChange={handleBathroomChange}
             displayEmpty
-            style={{height:'0%', padding:'0px 20px'}}
+            style={{height:'0%', padding:'0px 20px' }}
           />
         </FormControl>
 
@@ -105,7 +105,7 @@ const Filtar = () => {
 
 
       </div>
-      <div style={{display:'flex',flexWrap:'wrap' ,gap: '28px',paddingTop:'20PX'}}>
+      <div style={{display:'flex',flexWrap:'wrap' ,gap: '28px',paddingTop:'30PX',justifyContent:'center'}}>
           <CardContainer  houses={filteredHouses} />
         </div>
     </div>

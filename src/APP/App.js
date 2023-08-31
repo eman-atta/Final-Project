@@ -10,6 +10,10 @@ import Details from '../pages/Details'
 import Search from '../pages/Search'
 import Houses from '../pages/Houses'
 import AddHouse from '../pages/AddHouse'
+import Found404 from '../Components/Found404'
+import MyFavorites from '../pages/MyFavorites'
+
+
 
 
 
@@ -33,6 +37,13 @@ function App() {
      <Route path='/Search' element={<Search/>}/>
      <Route path='/Houses' element={<Houses/>}/>
      <Route path='/AddHouse' element={<AddHouse/>}/>
+     <Route path='/*' element={<Found404/>}/>
+     <Route path='/MyFavorites' element={<MyFavorites/>}/>
+
+
+     
+
+
 
 
 

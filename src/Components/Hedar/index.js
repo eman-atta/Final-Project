@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import{Link} from 'react-router-dom';
+
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -86,7 +88,11 @@ export default function Demo() {
             inputProps={{ 'aria-label': 'search' }}
             startAdornment={
               <SearchIconWrapper>
-                <SearchIcon />
+                        <Link to='/Search' className='btn-link'  style={{ widows:'4x00p',color:'#000' }}> 
+
+                <SearchIcon  />
+                </Link>
+
               </SearchIconWrapper>
             }
             sx={{
@@ -96,6 +102,7 @@ export default function Demo() {
             }}
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
+
           />
         </Box>
       </Box>

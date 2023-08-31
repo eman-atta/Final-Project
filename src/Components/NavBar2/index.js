@@ -9,30 +9,23 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import{Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
-
-
-
-
-
-const pages = [ 
-<Button  style={{
-  textTransform:'capitalize'}}>
-  <Link to='/' className='btn-link' style={{ color:'#0B885B' }}> House</Link>
- </Button>
-,  
-  <Button style={{ textTransform:'capitalize', }}>
-    <Link to='/aboutus' className='btn-link'  style={{color:'#0B885B' }}> AboutUs</Link>
+const pages = [
+  <Button style={{ textTransform: 'capitalize' }}>
+    <Link to='/' className='btn-link' style={{ color: '#0B885B' }}> House</Link>
   </Button>,
-  <Button style={{ textTransform:'capitalize', }}>
-    <Link to='/contactus' className='btn-link' style={{ color:'#0B885B'}}>ContactUs</Link>
-  </Button>];
-
+  <Button style={{ textTransform: 'capitalize' }}>
+    <Link to='/aboutus' className='btn-link' style={{ color: '#0B885B' }}> AboutUs</Link>
+  </Button>,
+  <Button style={{ textTransform: 'capitalize' }}>
+    <Link to='/contactus' className='btn-link' style={{ color: '#0B885B' }}>ContactUs</Link>
+  </Button>
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,14 +33,11 @@ function ResponsiveAppBar() {
     setAnchorElNav(event.currentTarget);
   };
 
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-
   const [anchorEl, setAnchorEl] = React.useState(null);
-
   const isMenuOpen = Boolean(anchorEl);
 
   const handleProfileMenuOpen = (event) => {
@@ -59,7 +49,6 @@ function ResponsiveAppBar() {
   };
 
   const menuId = 'primary-search-account-menu';
-
 
   return (
     <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
@@ -111,11 +100,11 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-             {pages.map((page) => (
+              {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}  
+              ))}
             </Menu>
           </Box>
           <Typography
@@ -136,86 +125,67 @@ function ResponsiveAppBar() {
             Homes
           </Typography>
 
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: { md: 'center' } }}>
+            <Button style={{ textTransform: 'capitalize' }}>
+              <Link to='/' className='btn-link' style={{ color: '#0B885B', fontSize: 'large' }}>
+                House
+              </Link>
+            </Button>
 
-    
+            <Button style={{ textTransform: 'capitalize' }}>
+              <Link to='/aboutus' className='btn-link' style={{ color: '#0B885B', fontSize: 'large' }}>
+                AboutUs
+              </Link>
+            </Button>
 
-
-
-
-<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },justifyContent: { md: 'center' } }}>
-   
-
-
-
-                 <Button  style={{
-                  textTransform:'capitalize',
-                 }}>
-                  <Link to='/' className='btn-link' style={{ color:'#0B885B',fontSize:' large' }}>
-                    House</Link>
-                 </Button>
-
-
-                 <Button style={{textTransform:'capitalize', }}>
-                  <Link to='/aboutus' className='btn-link'  style={{color:'#0B885B' ,fontSize:' large' }}>
-                  AboutUs</Link>
-                  </Button>
-
-
-                 <Button style={{ textTransform:'capitalize', }}>
-                  <Link to='/contactus' className='btn-link' style={{color:'#0B885B' ,fontSize:' large'}}>
-                    ContactUs</Link>
-                  </Button>
-                  
-
-
-
-          </Box> 
+            <Button style={{ textTransform: 'capitalize' }}>
+              <Link to='/contactus' className='btn-link' style={{ color: '#0B885B', fontSize: 'large' }}>
+                ContactUs
+              </Link>
+            </Button>
+          </Box>
 
           <div>
-            <PersonOutlineOutlinedIcon style={{color:'#0B885B'}}
-        size="large"
-        aria-label="account of current user"
-        aria-controls={menuId}
-        aria-haspopup="true"
-        
-      >
-      </PersonOutlineOutlinedIcon >
-      <ArrowDropDownIcon style={{color:'#0B885B'}}
-        size="large"
-        aria-label="account of current user"
-        aria-controls={menuId}
-        aria-haspopup="true"
-        onClick={handleProfileMenuOpen}
-      >
-        <AccountCircle />
-      </ArrowDropDownIcon>
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        id={menuId}
-        keepMounted
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        open={isMenuOpen}
-        onClose={handleMenuClose}
-      >
-        <div onClick={handleMenuClose}>Profile</div>
-        <div onClick={handleMenuClose}>My account</div>
-      </Menu>
-    </div>
-
-
- 
-      
-
+            <PersonOutlineOutlinedIcon
+              style={{ color: '#0B885B' }}
+              size="large"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+            />
+            <ArrowDropDownIcon
+              style={{ color: '#0B885B' }}
+              size="large"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+            >
+              <AccountCircle />
+            </ArrowDropDownIcon>
+            <Menu
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              id={menuId}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={isMenuOpen}
+              onClose={handleMenuClose}
+            >
+              <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+              <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            </Menu>
+          </div>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;

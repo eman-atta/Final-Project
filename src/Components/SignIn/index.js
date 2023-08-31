@@ -25,6 +25,7 @@ export default function SignIn() {
   const [emailError, setEmailError] = React.useState('');
   const [passwordError, setPasswordError] = React.useState('');
   const [submitButtonDisabled, setSubmitButtonDisabled] = React.useState(true);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   React.useEffect(() => {
     if (email && password) {
@@ -37,7 +38,6 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Validate the email and password fields
     if (email === '') {
       setEmailError('Please Enter Your email');
       return;
@@ -47,23 +47,26 @@ export default function SignIn() {
       return;
     }
 
+    setIsLoggedIn(true);
+
     console.log({
       email: email,
       password: password,
     });
-
   };
 
   return (
     <div>
-      <Typography
-        variant="h3"
-        align="center"
-        gutterBottom
-        style={{ padding: '70px 0px 25px 0px', color: '#0B885B' }}
-      >
-        Sign in
-      </Typography>
+      {isLoggedIn ? null : (
+        <Typography
+          variant="h3"
+          align="center"
+          gutterBottom
+          style={{ padding: '70px 0px 25px 0px', color: '#0B885B' }}
+        >
+          Sign in
+        </Typography>
+      )}
 
       <Paper
         sx={{

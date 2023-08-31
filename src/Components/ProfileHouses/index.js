@@ -105,8 +105,60 @@ export default function ComplexGrid() {
             
         </Grid>
         
+<Grid container spacing={1} >
+    <Grid item height={200}> 
+    <Img alt="complex" src={Imges} />
+  </Grid>
+<Grid item xs={{width:"200px", height:"500px"}} sm container>
+  <Grid item xs container direction="column" spacing={9} display="flex"  >
+    
+    <Grid item xs >
+      <Typography
+        component="h6"
+        variant="h6"
+        display ="flex"               
+        align="justify"
+        color="text.primary"
+        padding=" 0 0 8px 25px"
+        width="500px"
+        justifyContent="space-between"
+           >
+Home Details     
+<Grid>
+<EditNoteIcon style={{color:'#0B885B'}}/>
+<DeleteForeverIcon style={{color:'#0B885B'}}/>
+
+</Grid>
+
+ </Typography>
+      <Grid item style={{ width:"180px", display:"flex" , padding:' 0 0 8px 25px',   }}>
+ 
+      <Typography variant="body2" color="text.secondary">
+      Location:  Gaza             
+      </Typography>
+      </Grid>
+      <Grid item style={{ width:"180px", display:"flex" , padding:' 0 0 8px 25px'}}>
+      <Typography variant="body2" color="text.secondary">
+      Mobile:  0599999              
+      </Typography>
+      </Grid>
+      <Grid item style={{ width:"180px", display:"flex", padding:' 0 0 8px 25px'}}>
+      <Typography variant="body2" color="text.secondary">
+      Rooms:  2      </Typography>
+      </Grid>
+      <Grid item style={{ width:"180px", display:"flex", padding:' 0 0 8px 25px'}}>
+      <Typography variant="body2" color="text.secondary">
+      Price:  500$     </Typography>
+      </Grid>
+
+    </Grid>
+
+  </Grid>
+</Grid>
+
+</Grid>
 <Grid container spacing={1}>
-    <Grid item>
+    <Grid item height={200}>
     <Img alt="complex" src={Imges} />
   </Grid>
 <Grid item xs={{width:"200px", height:"500px"}} sm container>
@@ -139,7 +191,7 @@ Home Details
       </Grid>
       <Grid item style={{ width:"180px", display:"flex" , padding:' 0 0 8px 25px'}}>
       <Typography variant="body2" color="text.secondary">
-      Mobile:  05999999999              
+      Mobile:  059999              
       </Typography>
       </Grid>
       <Grid item style={{ width:"180px", display:"flex", padding:' 0 0 8px 25px'}}>
@@ -157,75 +209,11 @@ Home Details
 </Grid>
 
 </Grid>
-<Grid container spacing={1}>
-    <Grid item>
-    <Img alt="complex" src={Imges} />
-  </Grid>
-<Grid item xs={{width:"200px", height:"500px"}} sm container>
-  <Grid item xs container direction="column" spacing={9} display="flex"  >
-    
-    <Grid item xs>
-      <Typography
-        component="h6"
-        variant="h6"
-        display ="flex"               
-        align="justify"
-        color="text.primary"
-        padding=" 0 0 8px 25px"
-        width="500px"
-        justifyContent="space-between"
-           >
-Home Details     
-<Grid>
-<EditNoteIcon style={{color:'#0B885B'}}/>
-<DeleteForeverIcon style={{color:'#0B885B'}}/>
-
-</Grid>
-
- </Typography>
-      <Grid item style={{ width:"180px", display:"flex" , padding:' 0 0 8px 25px'}}>
- 
-      <Typography variant="body2" color="text.secondary">
-      Location:  Gaza             
-      </Typography>
-      </Grid>
-      <Grid item style={{ width:"180px", display:"flex" , padding:' 0 0 8px 25px'}}>
-      <Typography variant="body2" color="text.secondary">
-      Mobile:  05999999999              
-      </Typography>
-      </Grid>
-      <Grid item style={{ width:"180px", display:"flex", padding:' 0 0 8px 25px'}}>
-      <Typography variant="body2" color="text.secondary">
-      Rooms:  2      </Typography>
-      </Grid>
-      <Grid item style={{ width:"180px", display:"flex", padding:' 0 0 8px 25px'}}>
-      <Typography variant="body2" color="text.secondary">
-      Price:  500$     </Typography>
-      </Grid>
-
-    </Grid>
-
-  </Grid>
-</Grid>
-
-</Grid>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <Grid item xs={12} sm container>
           <Grid item xs container direction="column"  display="flex"  alignItems= "start" style={{height:'200px'}}>
-            <Grid item >
+            <Grid item  height={200}>
      <Grid container spacing={1}>
     <Grid item>
     <Img alt="complex" src={Imges} />
@@ -260,7 +248,7 @@ Home Details
       </Grid>
       <Grid item style={{ width:"180px", display:"flex" , padding:' 0 0 8px 25px'}}>
       <Typography variant="body2" color="text.secondary">
-      Mobile:  05999999999              
+      Mobile:  059999              
       </Typography>
       </Grid>
       <Grid item style={{ width:"180px", display:"flex", padding:' 0 0 8px 25px'}}>
@@ -284,8 +272,6 @@ Home Details
             </Grid>
           </Grid>
         </Grid>
-
-
 
 
       </Paper>

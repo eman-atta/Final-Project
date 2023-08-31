@@ -159,15 +159,9 @@ Home Details
 </Grid>
 
 </Grid>
-
-
-
             </Grid>
           </Grid>
         </Grid>
-
-
-
 
       </Paper>
     </div>

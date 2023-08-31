@@ -3,7 +3,6 @@ const users = [
       email: 'ola.com',
       password: '123',
       name: 'ola',
-      // يمكنك إضافة المزيد من المعلومات هنا
     },
     {
       email: 'alaa.com',
